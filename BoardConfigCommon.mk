@@ -161,7 +161,7 @@ BOARD_SEPOLICY_UNION += \
     property_contexts
 
 # Time services
-BOARD_USES_QC_TIME_SERVICES := true
+#BOARD_USES_QC_TIME_SERVICES := true
 
 # QC PROPRIETARY
 ifneq ($(QCPATH),)
