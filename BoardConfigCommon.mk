@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-VENDOR_PATH := device/cyanogen/msm8916-common
+VENDOR_PATH := device/lenovo/msm8916-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
@@ -52,13 +52,17 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
 endif
 
+# Radio
+ADD_RADIO_FILES := true
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
+
 # Properties (reset them here, include more in device if needed)
 TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
