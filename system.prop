@@ -46,6 +46,7 @@ media.stagefright.use-awesome=false
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 
+ro.sf.lcd_density=320
 
 persist.timed.enable=true
 ro.opengles.version=196608
