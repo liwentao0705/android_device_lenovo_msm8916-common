@@ -95,7 +95,7 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
+BOARD_HARDWARE_CLASS += hardware/mokee/cmhw
 
 # malloc implementation
 MALLOC_IMPL := dlmalloc
